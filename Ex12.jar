@@ -1,0 +1,13 @@
+ /* Ex012
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 13/04/2024
+ Programa que escreve o nome de 347 a 18*/
+
+ 
+public class Numero {
+    public static void main(String[] args) {
+        for (int i = 347; i >= 18; i--) {
+            System.out.println(i);
+        }
+    }
+}

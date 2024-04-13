@@ -1,0 +1,33 @@
+ /* Ex017
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 13/04/2024
+ Programa que verifica se um numero é negativo*/
+
+ 
+import java.util.Scanner;
+
+public class SomaValores {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int soma = 0;
+        int valor;
+        
+        System.out.println("Digite valores positivos (digite um valor negativo para encerrar):");
+        do {
+            System.out.print("Valor: ");
+            valor = scanner.nextInt();
+            
+            if (valor > 0) {
+                soma += valor;
+            } else if (valor < 0) {
+                System.out.println("Valor negativo detectado. Encerrando entrada de dados.");
+            }
+        } while (valor >= 0);
+        
+        scanner.close();
+        
+        System.out.println("A soma dos valores digitados e: " + soma);
+    }
+}
+

@@ -1,0 +1,45 @@
+ /* Ex03
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 10/04/2024
+ Programa que calcula o resultado da soma dos tres valores e caso seja maior que o dobro do maior valor mostra a diferenca dos tres valores.*/
+ 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita que o usuario digite os tres valores
+        System.out.println("Digite o primeiro valor:");
+        int valor1 = scanner.nextInt();
+        
+        System.out.println("Digite o segundo valor:");
+        int valor2 = scanner.nextInt();
+        
+        System.out.println("Digite o terceiro valor:");
+        int valor3 = scanner.nextInt();
+        
+        // Calcula a soma dos tres valores
+        int soma = valor1 + valor2 + valor3;
+        
+        // Encontra o maior valor
+        int maior = valor1;
+        if (valor2 > maior) {
+            maior = valor2;
+        }
+        if (valor3 > maior) {
+            maior = valor3;
+        }
+        
+        // Verifica se a soma dos tres valores e maior que o dobro do maior valor
+        if (soma > (2 * maior)) {
+            // Calcula a diferenca dos tres valores
+            int diferenca = soma - (2 * maior);
+            System.out.println("A diferenca dos tres valores e: " + diferenca);
+        } else {
+            System.out.println("A soma dos tres valores nao e maior que o dobro do maior valor.");
+        }
+        
+        scanner.close();
+    }
+}

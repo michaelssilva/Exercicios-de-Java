@@ -1,0 +1,48 @@
+ /* Ex08
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 12/04/2024
+ Programa que verifica se o numero e divesivel por 2, 3 e/ou 7*/
+
+ 
+import java.util.Scanner;
+
+public class Divisores {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Digite um numero inteiro: ");
+        int numero = scanner.nextInt();
+        scanner.close();
+        
+        encontrarDivisores(numero);
+    }
+    
+    public static void encontrarDivisores(int numero) {
+        if (numero % 2 == 0) {
+            System.out.print("Divisivel por 2");
+            if (numero % 3 == 0) {
+                System.out.print(" e 3");
+                if (numero % 7 == 0) {
+                    System.out.println(" e 7 simultaneamente.");
+                } else {
+                    System.out.println(" simultaneamente.");
+                }
+            } else if (numero % 7 == 0) {
+                System.out.println(" e 7 simultaneamente.");
+            } else {
+                System.out.println(" apenas.");
+            }
+        } else if (numero % 3 == 0) {
+            System.out.print("Divisivel por 3");
+            if (numero % 7 == 0) {
+                System.out.println(" e 7 simultaneamente.");
+            } else {
+                System.out.println(" apenas.");
+            }
+        } else if (numero % 7 == 0) {
+            System.out.println("Divisivel por 7 apenas.");
+        } else {
+            System.out.println("Nao e divisivel por 2, 3 ou 7.");
+        }
+    }
+}
+

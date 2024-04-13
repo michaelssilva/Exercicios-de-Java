@@ -1,0 +1,16 @@
+ /* Ex014
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 13/04/2024
+ Programa que verifica se um numero e multiplo de 11 dentro do intervalo 1 a 100*/
+
+ 
+public class MultiplosDeOnze {
+    public static void main(String[] args) {
+        System.out.println("Numeros multiplos de 11 entre 1 e 100 em ordem decrescente:");
+        for (int i = 100; i >= 1; i--) {
+            if (i % 11 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+}

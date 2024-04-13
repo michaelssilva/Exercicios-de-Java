@@ -1,0 +1,33 @@
+ /* Ex015
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 13/04/2024
+ Programa que verifica se um numero esta dentro do intervalo 10 a 157*/
+
+ 
+import java.util.Scanner;
+
+public class Intervalo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int dentroIntervalo = 0;
+        int foraIntervalo = 0;
+        
+        System.out.println("Digite 10 valores:");
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Valor " + (i+1) + ": ");
+            int valor = scanner.nextInt();
+            
+            if (valor > 10 && valor < 157) {
+                dentroIntervalo++;
+            } else {
+                foraIntervalo++;
+            }
+        }
+        
+        scanner.close();
+        
+        System.out.println("Valores dentro do intervalo ]10,157[: " + dentroIntervalo);
+        System.out.println("Valores fora do intervalo ]10,157[: " + foraIntervalo);
+    }
+}

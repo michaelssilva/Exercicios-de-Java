@@ -1,0 +1,43 @@
+ /* Ex07
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 10/04/2024
+ Programa que verifica se os numeros sao iguais, depois Calcula o quadrado da diferenca do maior numero com seu primeiro sucessor impar*/
+
+ 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita que o usuario digite os dois numeros
+        System.out.println("Digite o primeiro numero:");
+        int numero1 = scanner.nextInt();
+        
+        System.out.println("Digite o segundo numero:");
+        int numero2 = scanner.nextInt();
+        
+        // Verifica qual dos dois numeros e maior ou se sao iguais
+        if (numero1 > numero2) {
+            System.out.println(numero1 + " e maior que " + numero2);
+        } else if (numero2 > numero1) {
+            System.out.println(numero2 + " e maior que " + numero1);
+        } else {
+            System.out.println("Os numeros sao iguais: " + numero1 + " = " + numero2);
+            scanner.close();
+            return; // Encerra o programa caso os numeros sejam iguais
+        }
+        
+        // Calcula o quadrado da diferenca do maior numero com seu primeiro sucessor impar
+        int maior = Math.max(numero1, numero2); // Encontra o maior numero
+        int sucessorImpar = (maior % 2 == 0) ? maior + 1 : maior + 2; // Encontra o primeiro sucessor impar
+        int diferenca = maior - sucessorImpar; // Calcula a diferenca
+        int quadradoDiferenca = diferenca * diferenca; // Calcula o quadrado da diferenca
+        
+        // Imprime o quadrado da diferenca
+        System.out.println("O quadrado da diferenca do maior numero com seu primeiro sucessor impar e: " + quadradoDiferenca);
+        
+        scanner.close();
+    }
+}
+

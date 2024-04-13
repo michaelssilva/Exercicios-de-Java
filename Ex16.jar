@@ -1,0 +1,43 @@
+ /* Ex016
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 13/04/2024
+ Programa que verifica se 15 numeros são impares ou pares*/
+
+ 
+import java.util.Scanner;
+
+public class ParOuImpar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int quantidadePares = 0;
+        int quantidadeImpares = 0;
+        
+        System.out.println("Digite 15 numeros inteiros:");
+        for (int i = 0; i < 15; i++) {
+            System.out.print("Numero " + (i+1) + ": ");
+            int numero = scanner.nextInt();
+            
+            if (numero % 2 == 0) {
+                System.out.println(numero + " e par.");
+                quantidadePares++;
+            } else {
+                System.out.println(numero + " e impar.");
+                quantidadeImpares++;
+            }
+        }
+        
+        scanner.close();
+        
+        System.out.println("Quantidade de numeros pares: " + quantidadePares);
+        System.out.println("Quantidade de numeros impares: " + quantidadeImpares);
+        
+        if (quantidadePares > quantidadeImpares) {
+            System.out.println("Ha mais numeros pares.");
+        } else if (quantidadeImpares > quantidadePares) {
+            System.out.println("Ha mais numeros impares.");
+        } else {
+            System.out.println("A mesma quantidade de numeros pares e impares.");
+        }
+    }
+}

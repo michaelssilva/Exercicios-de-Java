@@ -1,0 +1,14 @@
+ /* Ex010
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 13/04/2024
+ Programa que escreve o nome de 10 a 1*/
+
+ 
+public class Numero {
+    public static void main(String[] args) {
+        for (int i = 10; i >= 1; i--) {
+            System.out.println(i);
+        }
+    }
+}
+

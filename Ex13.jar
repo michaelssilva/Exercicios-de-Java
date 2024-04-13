@@ -1,0 +1,29 @@
+ /* Ex014
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 13/04/2024
+ Programa que verifica se um numero e par ou impar dentro de um determinado intervalo*/
+
+ 
+import java.util.Scanner;
+
+public class ParOuImpar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o limite inferior do intervalo: ");
+        int limiteInferior = scanner.nextInt();
+        
+        System.out.print("Digite o limite superior do intervalo: ");
+        int limiteSuperior = scanner.nextInt();
+        
+        scanner.close();
+        
+        for (int i = limiteInferior; i <= limiteSuperior; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i + " e par.");
+            } else {
+                System.out.println(i + " e impar.");
+            }
+        }
+    }
+}

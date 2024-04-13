@@ -1,0 +1,50 @@
+ /* Ex02
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 10/04/2024
+ Programa que ordena tres numeros em ordem decrescente */
+ 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita que o usuerio digite os tres valores
+        System.out.println("Digite o primeiro valor:");
+        int valor1 = scanner.nextInt();
+        
+        System.out.println("Digite o segundo valor:");
+        int valor2 = scanner.nextInt();
+        
+        System.out.println("Digite o terceiro valor:");
+        int valor3 = scanner.nextInt();
+        
+        // Encontra o menor valor
+        int menor;
+        if (valor1 < valor2 && valor1 < valor3) {
+            menor = valor1;
+        } else if (valor2 < valor1 && valor2 < valor3) {
+            menor = valor2;
+        } else {
+            menor = valor3;
+        }
+        
+        // Encontra o maior valor
+        int maior;
+        if (valor1 > valor2 && valor1 > valor3) {
+            maior = valor1;
+        } else if (valor2 > valor1 && valor2 > valor3) {
+            maior = valor2;
+        } else {
+            maior = valor3;
+        }
+        
+        // Encontra o valor do meio
+        int meio = (valor1 + valor2 + valor3) - (menor + maior);
+        
+        // Imprime os numeros em ordem crescente
+        System.out.println("Numeros em ordem crescente: " + maior + " " + meio + " " + menor);
+        
+        scanner.close();
+    }
+}

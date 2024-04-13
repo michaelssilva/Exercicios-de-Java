@@ -1,0 +1,30 @@
+ /* Ex05
+ Autor: Michael Douglas Santos Silva
+ Data da criacao: 10/04/2024
+ Programa que verifica se o numero digitado esta entre 100 
+e 500*/
+
+ 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita que o usuerio digite os tres valores
+        System.out.println("Digite o primeiro valor:");
+        int numero = scanner.nextInt();
+        
+        
+        // Encontra o menor valor
+        if (numero < 100) {
+            System.out.println("O numero " + numero + " e menor que 100.");
+        } else if (numero > 500) {
+            System.out.println("O numero " + numero + " e maior que 500.");
+        } else {
+            System.out.println("O numero " + numero + " esta entre 100 e 500.");
+        }
+        
+        scanner.close();
+    }
+}
